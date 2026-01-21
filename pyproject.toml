@@ -99,6 +99,7 @@ addopts = """
     --strict-config
     --strict-markers
     --showlocals
+    --cov
 """
 testpaths = ["tests"]
 python_files = ["test_*.py"]
