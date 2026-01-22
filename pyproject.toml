@@ -7,7 +7,9 @@ authors = [
     { name = "camhpj", email = "camhpjohnson@gmail.com" }
 ]
 requires-python = "==3.12.3"  # Databricks Runtime 17.3 LTS & Serverless Environment Version 4
-dependencies = []
+dependencies = [
+    "structlog>=25.5.0",
+]
 
 [dependency-groups]
 dev = [
@@ -34,7 +36,6 @@ major_version_zero = true
 target-version = "py312"
 line-length = 120
 indent-width = 4
-fix = true
 unsafe-fixes = false
 show-fixes = true
 exclude = [
@@ -114,13 +115,7 @@ branch = true
 parallel = true
 source = ["python_template"]
 omit = [
-  "tests/*",
-  "**/__init__.py",
-  "**/__main__.py",
-  "**/conftest.py",
-  "**/migrations/*",
-  "**/alembic/*",
-  "**/generated/*",
+  "tests/*"
 ]
 
 [tool.coverage.report]
